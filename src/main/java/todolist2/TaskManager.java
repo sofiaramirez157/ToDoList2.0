@@ -6,36 +6,76 @@ import java.util.ArrayList;
 
 public class TaskManager{
     
-    ArrayList<Tasks> arrayListName = new ArrayList<>();
-    ArrayList<Boolean> arrayListChecked = new ArrayList<>();
+    public static ArrayList<Tasks> arrayListName = new  ArrayList<>();
 
+    public void addTask(String name) {
 
-    public void addTask(String name){
+        Tasks newTask = new Tasks();
+        arrayListName.add(newTask.setName(name));
+        System.out.print("Task Added: "+ getTaskName());
 
-        arrayListName.add(new Tasks().setName(name));
-
-        Boolean check = new Boolean();
-
-        System.out.print("Task Add: "+ getTaskName());
-        System.out.println(" ");
     }
-    public String getTaskName() {
+
+    public void deleteTask(int index){
+        if (arrayListName.isEmpty()) {
+            System.out.println("No tasks available.");
+            
+        }else {
+            arrayListName.remove(index-1);
+            System.out.print("Task deleted: "+ getTaskName()  );
+            System.out.println(" ");
+            
+        }
+        
+    }
+
+    public void listTasks() {
+        System.out.println("Tasks:");
+    
+        
+        if (arrayListName.isEmpty()) {
+            System.out.println("No tasks available.");
+        } else {
+    
+            int index = 0;
+            for (Tasks task : arrayListName) {
+                System.out.println((index + 1) + ". " + task.getName()  + (task.isChecked() ? "[X]" : "[]"));
+                index++;
+            }
+        }
+    }
+
+    public void markComplited(int index){
+
+        if (arrayListName.isEmpty()) {
+            System.out.println("No tasks available.");
+        }else{
+            Tasks task = arrayListName.get(index);
+            task.setChecked(true);
+
+        }
+
+    }
+
+     public String getTaskName() {
         // Obtén el nombre de la última tarea agregada
         if (!arrayListName.isEmpty()) {
-            Tasks lastTask = arrayListName.get(arrayListName.size() - 1);
-            return lastTask.getName();
+            Tasks listTask = arrayListName.get(arrayListName.size() - 1);
+            return listTask.getName() ;
         } else {
             return "No tasks added yet";
         }
     }
 
 
-    public void deleteTask(int index){
-        arrayListChecked.remove(index-1);
-        String deletedTask = arrayListName.remove(index-1);
-        System.out.print("Task deleted: "+deletedTask);
-        System.out.println(" ");
-    }
+
+
+
+
+
+
+
+
 
     
 }

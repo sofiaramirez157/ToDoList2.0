@@ -3,7 +3,7 @@ package todolist2;
 public class Tasks {
 
     private String name;
-    private boolean checked; 
+    private boolean checked=false; 
 
     
     public String getName() {
