@@ -8,6 +8,7 @@ public class Tasks {
     private int time;
     private Boolean completed;
 }
+
 // Create the builder
 
 public Tasks(String name, String description, int time, Boolean completed) { 
@@ -49,4 +50,8 @@ public void setCompleted(boolean completed) {
  
 public String tasks(String name, String description, int time, boolean completed){
      return "name" + ' ' + "description" + ' ' + "time" + ' ' + "completed";
+}
+
+public void setCompleted(Boolean completed) {
+    this.completed = completed;
 }
