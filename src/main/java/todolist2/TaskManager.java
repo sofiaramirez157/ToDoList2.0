@@ -5,9 +5,8 @@ import java.util.ArrayList;
 
 
 public class TaskManager{
-    
+
     ArrayList<Tasks> arrayListName = new ArrayList<>();
-    ArrayList<Boolean> arrayListChecked = new ArrayList<>();
 
 
     public void addTask(String name){
@@ -31,11 +30,10 @@ public class TaskManager{
 
 
     public void deleteTask(int index){
-        arrayListChecked.remove(index-1);
-        String deletedTask = arrayListName.remove(index-1);
-        System.out.print("Task deleted: "+deletedTask);
+        arrayListName.remove(index-1);
+        System.out.print("Task deleted: "+getTaskName());
         System.out.println(" ");
     }
 
-    
+
 }
