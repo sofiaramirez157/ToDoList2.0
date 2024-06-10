@@ -24,6 +24,10 @@ public final class App {
         int choice = input.nextInt();
 
         if (choice==1) {
+
+            System.out.println(" ");
+            System.out.print("What task do you want to Add? ");
+            taskManager.addTask(input.nextLine());
             
         }else if (choice==2) {
             System.out.println(" ");
