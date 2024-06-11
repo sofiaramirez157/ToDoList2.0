@@ -13,8 +13,6 @@ public class TaskManager{
 
         arrayListName.add(new Tasks().setName(name));
 
-        Boolean check = new Boolean();
-
         System.out.print("Task Add: "+ getTaskName());
         System.out.println(" ");
     }
@@ -28,12 +26,16 @@ public class TaskManager{
         }
     }
 
-
     public void deleteTask(int index){
+        Tasks taskToRemove = arrayListName.get(index-1);
         arrayListName.remove(index-1);
-        System.out.print("Task deleted: "+getTaskName());
+        System.out.print("Task deleted: "+taskToRemove.getName()+" "+taskToRemove.isChecked());
         System.out.println(" ");
     }
 
-
+    public void listTask(){
+        for (int index=0; index < arrayListName.size(); index++){
+            System.out.println((index+1)+" "+arrayListName.get(index).getName()+" "+arrayListName.get(index).isChecked());
+        }
+    }
 }
