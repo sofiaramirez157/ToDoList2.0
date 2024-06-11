@@ -17,7 +17,7 @@ public class Tasks {
     }
 
     
-    public boolean isChecked() { 
+    public boolean isChecked(int par) { 
         return checked;
     }
 

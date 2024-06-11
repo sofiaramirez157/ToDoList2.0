@@ -39,7 +39,7 @@ public class TaskManager{
     
             int index = 0;
             for (Tasks task : arrayListName) {
-                System.out.println((index + 1) + ". " + task.getName()  + (task.isChecked() ? "[X]" : "[]"));
+                System.out.println((index + 1) + ". " + task.getName()  + (task.isChecked(index) ? "[X]" : "[]"));
                 index++;
             }
         }
@@ -50,7 +50,7 @@ public class TaskManager{
         if (arrayListName.isEmpty()) {
             System.out.println("No tasks available.");
         }else{
-            Tasks task = arrayListName.get(index);
+            Tasks task = arrayListName.get(index-1);
             task.setChecked(true);
 
         }
@@ -58,7 +58,7 @@ public class TaskManager{
     }
 
      public String getTaskName() {
-        // Obtén el nombre de la última tarea agregada
+        
         if (!arrayListName.isEmpty()) {
             Tasks listTask = arrayListName.get(arrayListName.size() - 1);
             return listTask.getName() ;

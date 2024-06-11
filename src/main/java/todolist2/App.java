@@ -9,7 +9,6 @@ public final class App {
         TaskManager taskManager = new TaskManager();
         
         System.out.println("WELCOME TO TASK MANAGER");
-
         
         while (true) {
             System.out.println(" ");
