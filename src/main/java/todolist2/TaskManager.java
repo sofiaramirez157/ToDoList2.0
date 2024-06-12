@@ -17,14 +17,15 @@ public class TaskManager{
     }
 
     public void deleteTask(int index){
-        if (arrayListName.isEmpty()) {
-            System.out.println("No tasks available.");
-            
-        }else {
-            arrayListName.remove(index-1);
+    
+        if (index >= 0 && index < arrayListName.size()) {
+            arrayListName.remove(index);
+            System.out.println("Task deleted successfully.");
             System.out.print("Task deleted: "+ getTaskName()  );
+
             System.out.println(" ");
-            
+        } else {
+            System.out.println("Invalid task number.");
         }
         
     }
@@ -66,16 +67,8 @@ public class TaskManager{
             return "No tasks added yet";
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-    
+    public boolean isEmpty() {
+        return arrayListName.isEmpty();
+    }
+        
 }
