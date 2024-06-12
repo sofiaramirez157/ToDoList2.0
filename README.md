@@ -1,4 +1,1 @@
-Para comenzar he creado una clase publica llamada tareas y declare los atriburos de esta tarea como su nombre, la descripcion, el tiempo y si esta completada o no.
-Luego de la linea 14 a la 19 declare el constructor con los atributos anteriormente nombrados.
-Finalmente en esta parte cree los getters y setters de cada objeto y retorne cada uno
-En el main.java hice la arraylist de listartarea poniendo cada tarea con sus objetos y finalmente un for para que me imprimese las tareas 
+Mark the tasks as completed, with objects in Java, first I will create two attributes for my class in this case it will be, name and if it is checked, I make a constructor and Getter and Setter, then I create an Array and Scanner method, I add my list, with false because none is completed, then I perform a for for my array and an IF/else, because I will mark a number and it will come out completed if it is outside the numbers that I enter it will say invalid index.
