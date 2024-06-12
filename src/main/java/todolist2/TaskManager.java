@@ -19,7 +19,7 @@ public class TaskManager{
     public void deleteTask(int index){
     
         if (index >= 0 && index < arrayListName.size()) {
-            arrayListName.remove(index);
+            arrayListName.remove(index-1);
             System.out.println("Task deleted successfully.");
             System.out.print("Task deleted: "+ getTaskName()  );
 
