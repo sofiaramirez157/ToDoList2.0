@@ -1,5 +1,3 @@
-
-=======
 # Getting Started 
 
 # TEAM4 DevOps F5 
@@ -64,4 +62,3 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 
 
->>>>>>> 90e6ab4 (progrm Ok)
