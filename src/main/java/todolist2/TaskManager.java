@@ -9,15 +9,13 @@ public class TaskManager{
     ArrayList<Tasks> arrayListName = new ArrayList<>();
 
 
-    public void addTask(String name){
-
-        arrayListName.add(new Tasks().setName(name));
-
-        System.out.print("Task Add: "+ getTaskName());
-        System.out.println(" ");
+    public void addTask(String name) {
+        Tasks newTask = new Tasks();
+        arrayListName.add(newTask.setName(name));
+        System.out.print("Task Added: "+ getTaskName());
     }
+
     public String getTaskName() {
-        // Obtén el nombre de la última tarea agregada
         if (!arrayListName.isEmpty()) {
             Tasks lastTask = arrayListName.get(arrayListName.size() - 1);
             return lastTask.getName();
@@ -40,7 +38,7 @@ public class TaskManager{
     }
 
     public void markCompleted(int taskIndex){
-        if (taskIndex >= 0 && taskIndex < arrayListName.size()){
+        if (taskIndex > 0 && taskIndex <= arrayListName.size()){
             arrayListName.get(taskIndex - 1).setChecked(true);
             System.out.println("task marked as check");
             System.out.println("-------------------------");
