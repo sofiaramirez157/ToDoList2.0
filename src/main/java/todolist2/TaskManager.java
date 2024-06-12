@@ -38,4 +38,16 @@ public class TaskManager{
             System.out.println((index+1)+" "+arrayListName.get(index).getName()+" "+arrayListName.get(index).isChecked());
         }
     }
+
+    public void markCompleted(int taskIndex){
+        if (taskIndex >= 0 && taskIndex < arrayListName.size()){
+            arrayListName.get(taskIndex - 1).setChecked(true);
+            System.out.println("task marked as check");
+            System.out.println("-------------------------");
+        } else {
+            System.out.println("invalid index task");
+            System.out.println("-------------------------");
+        }
+    }
+
 }

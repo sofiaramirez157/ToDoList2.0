@@ -35,9 +35,12 @@ public final class App {
             System.out.print("What task do you want to delete? ");
             taskManager.deleteTask(input.nextInt());
         }else if (choice==3) {
-
+            taskManager.listTask();
+            System.out.println("Enter the checked task number:");
+            int taskIndex = input.nextInt();
+            taskManager.markCompleted(taskIndex);
         }else if (choice==4){
-
+            taskManager.listTask();
         }else if (choice==5){
             break;
         }
